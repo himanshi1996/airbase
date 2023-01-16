@@ -1,0 +1,29 @@
+.container-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: loader 1.5s infinite;
+
+    .container {
+        width: 50%;
+        height: 100%;
+        opacity: 0.2;
+    }
+
+}
+
+@keyframes loader {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    50% {
+        transform: translateX(-60%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
