@@ -20,15 +20,15 @@ export const RandomList = () => {
                     <div className={`card-container`} key={index}>
                         <div className={"header"}>
                             <div className={"img"}>
-                                <img src='https://source.unsplash.com/random/200x200?sig=1' />
-                                {isLoading && <Skeleton />}
+                                
+                                {isLoading ? <Skeleton /> : <img src='https://source.unsplash.com/random/200x200?sig=1'/>}
                             </div>
 
-                            <p className={"header-category"}>Random Image{isLoading && <Skeleton />}</p>
+                            <p className={"header-category"}>{isLoading ? <Skeleton /> : 'Random Image'}</p>
                         </div>
                         <div className={"content"}>
-                            <p className={"content-name"}>Event Card{isLoading && <Skeleton />}</p>
-                            <p className={"content-timing"}>Image created using random image generator{isLoading && <Skeleton />}</p>
+                            <p className={"content-name"}>{isLoading ? <Skeleton /> : 'Event Card'}</p>
+                            <p className={"content-timing"}>{isLoading ? <Skeleton /> : 'Image created using random image generator'}</p>
                         </div>
 
                     </div>
